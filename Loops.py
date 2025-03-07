@@ -68,3 +68,31 @@ else:
           break
     else:
         print("It is prime")
+#10.  Write a program to palindrome or not. 
+num = int(input())
+temp = num
+rev = 0
+while (temp > 0):
+    digit = temp % 10
+    rev = rev * 10 + digit
+    temp = temp // 10
+if rev == num:
+    print("It is palindrome")
+else:
+    print("It is not palindrome")
+#11. Program to check whether a number is EVEN or ODD using switch 
+num = int(input("Enter a number: "))
+
+match num % 2:
+    case 0:
+        print("Even number")
+    case 1:
+        print("Odd number")
+#12. Print gender (Male/Female) program according to given M/F using switch 
+ch = (input("Enter a Gender: "))
+
+match ch:
+    case 'M':
+        print("Male")
+    case 'F':
+        print("Female")
