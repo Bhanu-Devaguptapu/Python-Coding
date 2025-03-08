@@ -62,22 +62,24 @@ def insert(arr,n,a):
 test = insert(arr,n,a)
 print("New Array:",test)
 #8. Write a function to find the minimum and maximum value of an array
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+arr= list(map(int,input("Enter array:").split()))
+def minimaxi(arr):
+    mini = arr[0]
+    maxi = arr[0]
+    for i in range(0,len(arr)):
+        if arr[i]< mini:
+            mini = arr[i]
+        if i > maxi:
+            maxi = arr[i]
+    return mini,maxi
+mini,maxi = minimaxi(arr)
+print("Mininmum:",mini,"Maximum:",maxi)
+#9. Write a function to reverse an array of integer values.
+arr= list(map(int,input("Enter array:").split()))
+def reverse(arr):
+    return arr[::-1]
+rev = reverse(arr)
+print("Reversed Array:",rev)
 #10. Write a function to find the duplicate values of an array 
 arr = list(map(int, input().split()))
 new_arr = []
@@ -92,3 +94,97 @@ def duplicate():
 
 duplicate_values = duplicate()
 print(duplicate_values)
+#11.Write a program to find the common values between two arrays
+arr1= list(map(int,input("Enter array1 elements:").split()))
+arr2= list(map(int,input("Enter array2 elements:").split()))
+def common(arr1,arr2):
+    com=[]
+    for i in arr1:
+        if i in arr2:
+            com.append(i)
+    return com
+c=common(arr1,arr2)
+print("Common Elements of 2 Arrays:",c)
+#12. Write a method to remove duplicate elements from an array
+arr= list(map(int,input("Enter array elements:").split()))
+def duplicate(arr):
+    dup = []
+    for i in arr:
+        if i not in dup:
+            dup.append(i)
+    return dup
+unique = duplicate(arr)
+print("Unique Elements:",unique)
+#13.  Write a method to find the second largest number in an array
+arr= list(map(int,input("Enter array elements:").split()))
+def sec_lar(arr):
+    first, sec = float('-inf'),float('-inf')
+    if len(arr) < 2:
+        return "There is no second largest"
+    for i in range(len(arr)):
+        if arr[i]> first:
+            sec, first = first, arr[i]
+        elif first > arr[i]> sec:
+            sec = arr[i]
+    return sec
+sl = sec_lar(arr)
+print("Second Largest Elements:",sl)
+#14. Write a method to find the second largest number in an array 
+arr= list(map(int,input("Enter array elements:").split()))
+def sec_lar(arr):
+    first, sec = float('-inf'),float('-inf')
+    if len(arr) < 2:
+        return "There is no second largest"
+    for i in range(len(arr)):
+        if arr[i]> first:
+            sec, first = first, arr[i]
+        elif first > arr[i]> sec:
+            sec = arr[i]
+    return sec
+sl = sec_lar(arr)
+print("Second Largest Elements:",sl)
+#15. Write a method to find number of even number and odd numbers in an array
+arr= list(map(int,input("Enter array elements:").split()))
+def even_odd(arr):
+    even =[]
+    odd= []
+    for i in arr:
+        if i % 2==0:
+            even.append(i)
+        else:
+            odd.append(i)
+    return "Even:",len(even),"Odd:",len(odd)
+print(even_odd(arr))
+#16.Write a function to get the difference of largest and smallest value.
+arr= list(map(int,input("Enter array elements:").split()))
+def diff(arr):
+    max,min= arr[0],arr[0]
+    for i in arr:
+        if i <min:
+            min= i
+        if i> max:
+            max = i
+    return max - min
+print(diff(arr))
+#17. Write a method to verify if the array contains two specified elements(12,23).
+arr = list(map(int, input("Enter array elements: ").split()))
+
+def check(arr):
+    found = [i for i in arr if i in (12, 23)]  
+    
+    if found:
+        print("It contains:", *found)  
+    else:
+        print("Not present")
+
+check(arr)
+#18. Write a program to remove the duplicate elements and return the new array 
+arr= list(map(int,input("Enter array elements:").split()))
+def duplicate(arr):
+    dup = []
+    for i in arr:
+        if i not in dup:
+            dup.append(i)
+    return dup
+unique = duplicate(arr)
+print("Unique Elements:",unique)
