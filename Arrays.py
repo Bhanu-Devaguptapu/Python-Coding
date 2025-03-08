@@ -77,6 +77,7 @@ print("New Array:",test)
 
 
 
+
 #10. Write a function to find the duplicate values of an array 
 arr = list(map(int, input().split()))
 new_arr = []
