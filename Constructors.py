@@ -51,8 +51,8 @@ if __name__ == "__main__":
     obj = AccessModifiers()  # Calls Public Constructor
     obj._protected_constructor()  # Can be accessed (not recommended)
     
-    # obj.__private_constructor()  # ❌ Cannot be accessed directly (will raise an error)
-    obj._AccessModifiers__private_constructor()  # ✅ Access via name mangling (not recommended)
+    # obj.__private_constructor()  #  Cannot be accessed directly (will raise an error)
+    obj._AccessModifiers__private_constructor()  # Access via name mangling (not recommended)
 #4. Write a program which illustrates the concept of attributes of a constructor.
 class ConstructorAttributes:
     def __init__(self, name, age):
