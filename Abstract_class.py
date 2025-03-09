@@ -68,3 +68,29 @@ class Dog(Animal):
 if __name__ == "__main__":
     dog = Dog()  
     dog.create_instance_and_call()  
+##4.Create an instance for the child class in child class and call non-abstract methods
+from abc import ABC, abstractmethod
+
+# Abstract Class
+class Animal(ABC):
+    @abstractmethod
+    def make_sound(self):  # Abstract Method (must be implemented in subclass)
+        pass
+
+    def sleep(self):  # Non-Abstract Method
+        print("Animal is sleeping") 
+
+# Subclass of Abstract Class
+class Dog(Animal):
+    def make_sound(self):
+        print("Dog barks")
+
+    def create_instance_and_call(self):
+        print("\nCreating instance of Dog inside Dog class:")
+        obj = Dog()  # Creating an instance of the child class inside itself
+        obj.sleep()  # Calling the non-abstract method from the abstract class
+
+# Main Execution
+if __name__ == "__main__":
+    dog = Dog()  
+    dog.create_instance_and_call()
